@@ -5,7 +5,7 @@ import re
 class MyString:
     def __init__(self, value=''):
         self._value = ''
-        self.value = value  # Use the setter
+        self.value = value  
 
     @property
     def value(self):
@@ -13,10 +13,11 @@ class MyString:
 
     @value.setter
     def value(self, val):
-        if isinstance(val, str):
-            self._value = val
-        else:
-            raise ValueError("Value must be a string.")
+     if isinstance(val, str):
+        self._value = val
+     else:
+      print("The value must be a string.")
+
 
     def is_sentence(self):
         return self.value.endswith('.')
